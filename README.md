@@ -9,7 +9,7 @@ yarn init
 
 必要なパッケージの追加
 ```bash
-yarn add react react-dom next firebase @chakra-ui/react @chakra-ui/icons next-firebase-auth firebase-admin react-firebaseui framer-motion @emotion/react @emotion/styled next-absolute-url
+yarn add react react-dom next firebase next-firebase-auth firebase-admin react-firebaseui next-absolute-url framer-motion @chakra-ui/react @chakra-ui/icons @emotion/react @emotion/styled 
 ```
 
 
