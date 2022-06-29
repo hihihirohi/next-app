@@ -15,10 +15,10 @@ const styles = {
 
 const Auth = () => (
   <div style={styles.content}>
-    <h3>ログイン</h3>
+    <h3>ログイン画面</h3>
     <div style={styles.textContainer}>
       <p>
-        ログインしてなかったら新しく作ります。
+        ログインしていなかったら新しく作ります。
       </p>
     </div>
     <div>
