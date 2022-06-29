@@ -18,7 +18,7 @@ import {
     AuthAction,
 } from 'next-firebase-auth'
 import getAbsoluteURL from '../utils/getAbsoluteURL'
-import { AddIcon, DeleteIcon, StarIcon } from "@chakra-ui/icons"
+import { AddIcon, DeleteIcon, CloseIcon } from "@chakra-ui/icons"
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
@@ -69,49 +69,54 @@ const Todo = () => {
     }
 
     return (
-        <Flex flexDir="column" maxW={800} align="center" justify="center" minH="100vh" m="auto" px={4}>
-            <Flex justify="space-between" w="100%" align="center">
-                <Heading mb={4}>ようこそ {AuthUser.email} さん</Heading>
-                <DarkModeSwitch />
-            </Flex>
+        <div>
+           <Flex align="center" justify="end" p={4}>
+                <CloseIcon onClick={AuthUser.signOut} />
+           </Flex>
+            <Flex flexDir="column" maxW={800} align="center" justify="center" minH="100vh" m="auto" px={4}>
+                <Flex justify="space-between" w="100%" align="center">
+                    <Heading mb={4}>ようこそ {AuthUser.email} さん</Heading>
+                    <DarkModeSwitch />
+                </Flex>
 
-            <InputGroup>
-                <InputLeftElement
-                    pointerEvents="none"
-                    children={<AddIcon color="gray.300" />}
-                />
-                <Input type="text" onChange={(e) => setInput(e.target.value)} placeholder="例）ほげほげ" />
-                <Button
-                    ml={2}
-                    onClick={() => sendData()}
-                >
-                    追加
-                </Button>
-            </InputGroup>
+                <InputGroup>
+                    <InputLeftElement
+                        pointerEvents="none"
+                        children={<AddIcon color="gray.300" />}
+                    />
+                    <Input type="text" onChange={(e) => setInput(e.target.value)} placeholder="例）ほげほげ" />
+                    <Button
+                        ml={2}
+                        onClick={() => sendData()}
+                    >
+                        追加
+                    </Button>
+                </InputGroup>
 
-            {todos.map((t, i) => {
-                return (
-                    <>
-                        {i > 0 && <Divider />}
-                        <Flex
-                            key={i}
-                            w="100%"
-                            p={5}
-                            my={2}
-                            align="center"
-                            borderRadius={5}
-                            justifyContent="space-between"
-                        >
-                            <Flex align="center">
-                                <Text fontSize="xl" mr={4}>{i + 1}.</Text>
-                                <Text>{t}</Text>
+                {todos.map((t, i) => {
+                    return (
+                        <>
+                            {i > 0 && <Divider />}
+                            <Flex
+                                key={i}
+                                w="100%"
+                                p={5}
+                                my={2}
+                                align="center"
+                                borderRadius={5}
+                                justifyContent="space-between"
+                            >
+                                <Flex align="center">
+                                    <Text fontSize="xl" mr={4}>{i + 1}.</Text>
+                                    <Text>{t}</Text>
+                                </Flex>
+                                <IconButton onClick={() => deleteTodo(t)} icon={<DeleteIcon />} />
                             </Flex>
-                            <IconButton onClick={() => deleteTodo(t)} icon={<DeleteIcon />} />
-                        </Flex>
-                    </>
-                )
-            })}
-        </Flex>
+                        </>
+                    )
+                })}
+            </Flex>
+        </div>
     )
 }
 
