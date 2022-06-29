@@ -5,10 +5,24 @@
   "repository": "https://github.com/hihihirohi/next-app.git",
   "author": "hihihirohi <hirothugu326@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "firebase": "^9.8.4",
-    "next": "^12.2.0",
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "firebase": "^8.9.1",
+    "firebase-admin": "^9.11.0",
+    "framer-motion": "^4",
+    "next": "11.1.0",
+    "next-absolute-url": "^1.2.2",
+    "next-firebase-auth": "0.13.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-firebaseui": "^5.0.2"
   }
 }
