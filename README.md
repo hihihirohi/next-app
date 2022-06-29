@@ -1,5 +1,32 @@
 # next-app
 
+## 使用技術
+
+### フロントエンド
+
+- Next.js
+
+   jsのフレームワークとして使用しています
+
+   https://nextjs.org/
+
+- Chakra-UI
+
+   CSSのフレームワークとして使用しています
+
+  https://chakra-ui.com/
+
+- React hooks
+
+  https://reactjs.org/docs/hooks-intro.html
+
+### バックエンド
+
+- Firebase
+
+  https://firebase.google.com/
+
+
 ## 環境構築
 
 yarn の追加
