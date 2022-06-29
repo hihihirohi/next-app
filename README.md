@@ -6,8 +6,6 @@
 
 - Next.js
 
-   jsのフレームワークとして使用しています
-
    https://nextjs.org/
 
 - Chakra-UI
@@ -40,7 +38,7 @@ yarn add react react-dom next firebase next-firebase-auth firebase-admin react-f
 ```
 
 
-ハンズオンで実装使用とおもったんですが。。。。
+ハンズオンで実装しようとおもったんですが。。。。
 
 ↓
 
