@@ -97,8 +97,14 @@ yarn add react react-dom next firebase @chakra-ui/react @chakra-ui/icons next-fi
 ↓
 
 
+## git clone
 
-Firebase Appの追加
+```bash
+git clone https://github.com/hihihirohi/next-app.git
+```
+
+
+## Firebase Appの追加
 
 https://firebase.google.com/
 
@@ -111,7 +117,8 @@ https://firebase.google.com/
 7. .env.localに値の設定
 
 
-これで動きます！！！
+## これで動きます！！！
+
 ```bash
 yarn run dev
 ```
